@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corne Cherry V3 - GCustoms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Teclados Mecánicos Custom</h1>
+        <nav>
+            <a href="indexteclado.html#home">Inicio</a>
+            <a href="indexteclado.html#products">Productos</a>
+            <a href="indexteclado.html#contact">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="product-detail">
+            <h2 class="product-title">Corne Cherry V3</h2>
+            <div class="product-detail-content">
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="imagenes/producto2/keyboard2.jpg" alt="Corne Cherry V3">
+                        
+                        <img src="imagenes/producto2/corne3.jpg" alt="Corne Cherry V3 - Vista 3">
+                    </div>
+                    <div class="carousel-buttons">
+                        <button class="carousel-button prev">&#10094;</button>
+                        <button class="carousel-button next">&#10095;</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <p>Teclado custom ergonómico dividido con switches Outemu Brown e iluminación RGB.</p>
+                    <p>Precio: ₡98.500</p>
+                    <p>El Corne Cherry V3 es un teclado mecánico compacto y ergonómico que te ofrece una experiencia de escritura cómoda y eficiente. Sus switches Outemu Brown proporcionan una sensación táctil satisfactoria, mientras que la iluminación RGB personalizable te permite adaptar el teclado a tu estilo.</p>
+                    <a href="https://wa.me/50672392710?text=Hola%2C%20estoy%20interesado%20en%20el%20producto%20Corne%20Cherry%20V3" target="_blank" class="buy-button">Contactar para comprar</a>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="recommended-products">
+            <h3 class="translucent-box centered">Productos Recomendados</h3>
+            <div class="product-list">
+                <a href="producto1.html" class="product-link">
+                    <div class="product">
+                        <img src="imagenes/producto1/keyboard1.jpg" alt="Corne Cherry V3">
+                        <h3>Corne Cherry V3</h3>
+                        <p>Teclado custom ergonómico con switches Outemu Blue e iluminación RGB.</p>
+                        <p>Precio: ₡98.500</p>
+                    </div>
+                </a>
+                <a href="producto3.html" class="product-link">
+                    <div class="product">
+                        <img src="imagenes/tecladomacro1/macro1.jpg" alt="Teclado de Atajos">
+                        <h3>Teclado de Atajos</h3>
+                        <p>Teclado de atajos personalizables.</p>
+                        <p>Precio: ₡25.500</p>
+                    </div>
+                </a>
+                <!-- Añade más productos recomendados según sea necesario -->
+            </div>
+        </section>
+
+        <section id="social-media">
+            <h3>Síguenos en nuestras redes sociales</h3>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><img src="imagenes/redes/facebook.png" alt="Facebook"></a>
+                <a href="https://twitter.com" target="_blank"><img src="imagenes/redes/twitter.png" alt="Twitter"></a>
+                <a href="https://instagram.com" target="_blank"><img src="imagenes/redes/instagram.png" alt="Instagram"></a>
+                <a href="https://youtube.com" target="_blank"><img src="imagenes/redes/youtube.png" alt="YouTube"></a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 GCustoms. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const prevButton = document.querySelector('.carousel-button.prev');
+            const nextButton = document.querySelector('.carousel-button.next');
+            const carouselImages = document.querySelector('.carousel-images');
+            let currentIndex = 0;
+
+            prevButton.addEventListener('click', function() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+            });
+
+            nextButton.addEventListener('click', function() {
+                if (currentIndex < carouselImages.children.length - 1) {
+                    currentIndex++;
+                    carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
